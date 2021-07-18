@@ -1,0 +1,13 @@
+
+<h5>styles com styles
+
+    <input type="text" [(ngModel)]="tamanhoFonte">
+    <button
+    [ngStyle]="{
+                'backgroundColor':( ativo ? 'blue' : 'gray'),
+                'color': (ativo ? 'white' : 'black'),
+                'fontWeight': (ativo ? 'bold' : 'normal'),
+                'fontSize': tamanhoFonte + 'px'
+    }"
+    (click)="mudarAtivo()"> TESTE    </button>   
+</h5>

@@ -3,18 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "diretiva": {
+    "angular-cli-libs-externas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
           "strict": true
-        },
-        "@schematics/angular:component": {
-          "style": "css"
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {}
         }
       },
       "root": "",
@@ -24,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/diretiva",
+            "outputPath": "dist/angular-cli-libs-externas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -33,10 +26,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/tether/dist/js/tether.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/materialize-css/dist/js/materialize.js"
+             
+            ]
           },
           "configurations": {
             "production": {
@@ -75,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "diretiva:build:production"
+              "browserTarget": "angular-cli-libs-externas:build:production"
             },
             "development": {
-              "browserTarget": "diretiva:build:development"
+              "browserTarget": "angular-cli-libs-externas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "diretiva:build"
+            "browserTarget": "angular-cli-libs-externas:build"
           }
         },
         "test": {
@@ -103,27 +102,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/tether/dist/js/tether.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/materialize-css/dist/js/materialize.js"]
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "scripts": []
           }
         }
       }
     }
   },
-  "defaultProject": "diretiva",
-  "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
-  }
+  "defaultProject": "angular-cli-libs-externas"
 }

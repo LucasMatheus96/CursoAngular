@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DiretivanNgifComponent } from './diretivan-ngif/diretivan-ngif.component';
 import { TesteComponent } from './teste/teste.component';
+import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch.component';
+import { DiretivaNgForComponent } from './diretiva-ng-for/diretiva-ng-for.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DiretivanNgifComponent,
-    TesteComponent
+    TesteComponent,
+    DiretivaNgswitchComponent,
+    DiretivaNgForComponent
   ],
   imports: [
     BrowserModule,

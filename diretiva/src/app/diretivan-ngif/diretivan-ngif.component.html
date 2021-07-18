@@ -1,1 +1,32 @@
-<p>diretivan-ngif works!</p>
+<h5>*ngIF</h5>
+
+<div *ngIf="cursos.length > 0 ">
+    lista de cursos aqui.
+</div>
+
+
+<div *ngIf="cursos.length == 0 ">
+    não existem cursos para serem listados.
+</div>
+
+
+<div *ngIf="mostrarCursos">
+    Listar de cursos aqui
+</div>
+
+<div *ngIf="!mostrarCursos ">
+   Não existe cursos para serem listados.
+</div>
+
+<br>
+
+<button (click)="onMostrarCurso()">Mostrar ou esconder cursos"</button>
+
+<h5>Hiden como alternativa</h5>
+<!-- <div [hiden]="!mostrarCursos">
+    Lista de cursos Aqui
+</div>
+
+<div [hiden]="mostrarCursos">
+  Não existem cursos para serem listados
+</div> -->

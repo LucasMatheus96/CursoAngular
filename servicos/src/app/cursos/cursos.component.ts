@@ -23,11 +23,11 @@ export class CursosComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursos = this.cursosService.getCursos();
-    this.cursosService.emiitirCursoCriado.subscribe(
-      function(curso){
-        console.log(curso)
-      }
-    );
+    // this.cursosService.emiitirCursoCriado.subscribe(
+    //   function(curso){
+    //     console.log(curso)
+    //   }
+    // );
   }
 
 }

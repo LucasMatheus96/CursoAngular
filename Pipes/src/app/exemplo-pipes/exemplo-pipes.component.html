@@ -1,0 +1,25 @@
+<h5>Exemplos de pipes</h5>
+ 
+
+<p>Titulo: {{livro.titulo | uppercase | lowercase | camelCase }}</p>
+<p>Estrelas: {{livro.raiting }}</p>
+<p>Paginas: {{livro.numeroPaginas}}</p>
+<p>Preço: {{livro.preco | currency:'BRL':true}}</p>
+<p>Data de Lançamento: {{livro.dataLancamento | date }}</p>
+<p>Url: {{ livro.url }}</p>
+<br>
+<p>livro: {{ livro | json}}</p>
+<br>
+
+<input type="text" [(ngModel)]="filtro" >
+<br>
+<input type="text" #novoValor >
+<button (click)="addCurso(novoValor.value)" >Add curso</button>
+
+<ul>
+    <li *ngFor="let item of livros | filtroArray:filtro">
+        {{ item }}     
+    </li>
+</ul>
+<br>
+<h5>Maneira correta de usar filtro </h5>

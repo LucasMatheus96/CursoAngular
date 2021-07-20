@@ -1,3 +1,4 @@
+import { AuthService } from './login/auth.service';
 
 
 
@@ -37,7 +38,8 @@ import { AppRoutingModule } from './app.routing.module';
      AlunosModule,
      AppRoutingModule
   ],
-   providers: [CursosService],
+   providers: [CursosService ,
+  AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

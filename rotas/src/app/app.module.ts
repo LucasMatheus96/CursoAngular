@@ -1,6 +1,4 @@
-import { AuthService } from './login/auth.service';
-
-
+import { AlunosGuard } from './guards/alunos.guard';
 
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -22,6 +20,8 @@ import { AlunosModule } from './alunos/alunos.modules';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AuthGuard } from './guards/auth.guard';
+import { CursosGuard } from './guards/cursos.guard';
+import { AuthService } from './login/auth.service';
 
 @NgModule({
   declarations: [
@@ -39,8 +39,12 @@ import { AuthGuard } from './guards/auth.guard';
      AlunosModule,
      AppRoutingModule
   ],
-   providers: [CursosService ,
-  AuthService, AuthGuard],
+   providers: [
+     CursosService,
+     AuthService,
+     AuthGuard,
+     CursosGuard,
+      AlunosGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

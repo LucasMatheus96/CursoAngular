@@ -1,3 +1,6 @@
+import { AlunosGuard } from './guards/alunos.guard';
+
+
 import { NgModule } from "@angular/core";
 
 import { Component, ModuleWithProviders } from '@angular/core';
@@ -10,13 +13,24 @@ import { CursosComponent } from "./cursos/cursos.component";
 import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 import { CursoNaoEncontradoComponent } from "./cursos/curso-nao-encontrado/curso-nao-encontrado.component";
 import { AuthGuard } from "./guards/auth.guard";
+import { CursosGuard } from "./guards/cursos.guard";
+import { AlunosComponent } from './alunos/alunos.component';
 
 
 const cursosRoutes:Routes =[
     // {path: 'cursos', loadChildren:'app/cursos/cursos.module#CursosModule'},
     // {path: 'alunos', loadChildren:'app/alunos/alunos.module#AlunosModule'},
     {path: 'cursos', component: CursosComponent , 
-     canActivate:[AuthGuard] },
+     canActivate:[AuthGuard],
+     canActivateChild:[CursosGuard]
+    },
+
+    {path: 'alunos', component: AlunosComponent , 
+     canActivate:[AuthGuard],
+     canActivateChild:[AlunosGuard]
+     
+    },
+
     {path: 'curso/:id', component: CursoDetalheComponent,
      canActivate:[AuthGuard] },
 

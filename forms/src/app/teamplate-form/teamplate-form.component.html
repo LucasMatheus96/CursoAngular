@@ -1,0 +1,100 @@
+<!-- <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
+    <div class="form-group" ngClass="aplicaCssErro(nome)" >
+
+        <div class="col-sm-12">
+            <label for="nome">Nome</label>            
+        </div>              
+      
+        <div class="col-sm-12" >
+
+         
+            <input type="text" class="form-control" name="nome"
+                   id="nome" placeholder="Nome" [ngModel]="usuario.nome"
+                   required #nome="ngModel" >               
+            
+
+        </div>
+    </div>     
+
+    /* EMAIL ------------------------------------------------------------------------------------------------------------*/
+    <div class="form-group" [ngClass]="aplicaCssErro(email)">
+
+        <div class="col-sm-12">
+            <label for="email">Email</label>
+        </div>
+     
+        <div class="col-sm-12">
+            <input type="email" class="form-control" name="email" id="email" placeholder="nome@email.com" [ngModel]="usuario.email" required email  #email="ngModel" >
+
+                <div *ngIf=" !email.valid && email.touched" class="alert alert-danger" role="alert"> Email é obrigatorio </div>
+
+        </div>            
+    </div>
+
+
+    <div class="form-group">
+
+        <div class="col-md-3"  >
+            <label for="cep" class="control-label">CEP</label>
+            <input type="text" class="form-control" id="cep" name="cep" ngModel required #cep=ngModel (blur)="consultaCEP($event)"> 
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" *ngIf="!cep.valid && cep.touched"></span>
+            <div *ngIf="!cep.valid && cep.touched" class="alert alert-danger" role="alert">            
+                CEP é obrigatorio
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <label for="numero" class="control-label">Numero</label>
+            <input type="text" class="form-control" id="numero" name="numero" ngModel required #numero=ngModel> 
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" *ngIf="!numero.valid && numero.touched"></span>
+            <div *ngIf="!numero.valid && numero.touched" class="alert alert-danger" role="alert">
+                Numero é obrigatorio
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="Complemento" class="control-label">Complemento</label>
+            <input type="text" class="form-control" id="Complemento" name="Complemento" ngModel  #Complemento=ngModel>            
+        </div>  
+    </div>
+
+    <div class="form-group" [ngClass]="aplicaCssErro(rua)" >
+         <div class="col-sm-12">
+            <label for="rua">Rua</label>  
+            <input type="text" class="form-control" id="rua" name="rua"  placeholder="rua" ngModel required #rua="ngModel" >  
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" *ngIf="!cep.valid && cep.touched"></span>    
+            <div *ngIf=" !rua.valid && rua.touched" class="alert alert-danger" role="alert">Rua é obrigatorio </div>           
+   </div>
+</div>     
+
+    <div class="form-group" [ngClass]="aplicaCssErro(bairro)" >
+        <div class="col-md-5">
+            <label for="bairro">bairro</label>                           
+        
+            <input type="text" class="form-control" name="bairro" id="bairro" placeholder="bairro" ngModel required #bairro="ngModel" >      
+                <div *ngIf=" !bairro.valid && bairro.touched" class="alert alert-danger" role="alert">bairro é obrigatorio </div>           
+        </div>
+
+        <div class="col-md-4">
+            <label for="cidade">cidade</label>            
+
+            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="cidade"ngModel  required #cidade="ngModel" >      
+                <div *ngIf=" !cidade.valid && cidade.touched" class="alert alert-danger" role="alert">cidade é obrigatorio </div>    
+        </div>              
+      
+        
+        <div class="col-md-3">
+            <label for="estado">estado</label>            
+        
+            <input type="text" class="form-control" name="estado" id="estado" placeholder="estado" ngModel required #estado="ngModel" >      
+                <div *ngIf=" !estado.valid && estado.touched" class="alert alert-danger" role="alert">estado é obrigatorio </div>    
+        </div>                 
+        
+    </div>    
+
+
+    <button type="submit" class="btn btn-primary"
+    [disabled]="!f.valid">Submit</button>
+
+  <app-form-debug [form]="f"></app-form-debug>
+</form> -->

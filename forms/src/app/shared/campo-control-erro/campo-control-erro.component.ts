@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-campo-control-erro',
@@ -7,13 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CampoControlErroComponent implements OnInit {
 
-   @Input() mostrarErro : boolean = false;
-   
-   @Input() msgErro: string = ''
+  @Input() msgErro: string;
+  @Input() mostrarErro: any;
 
   constructor() { }
 
-  ngOnInit(): void {  
+  ngOnInit() {
   }
 
 }
